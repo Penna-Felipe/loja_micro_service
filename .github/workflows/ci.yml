@@ -34,7 +34,7 @@ jobs:
       - name: Executar todos os testes
         run: |
           pytest -m "not integracao" -s
-          
+
   test-integracao:
     name: Teste Integração
     runs-on: ubuntu-latest
@@ -55,6 +55,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+        
+      - name: Depurar a conexão com a API via cURL
+        run: |
+          echo "A tentar conectar-se a https://fakestoreapi.com/products"
+          # O '--verbose' mostra todos os detalhes da conexão e os cabeçalhos HTTP
+          curl --verbose https://fakestoreapi.com/products
 
       # Passo 4: Executar os testes unitarios
       - name: Executar todos os testes
