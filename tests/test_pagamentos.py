@@ -4,7 +4,7 @@ import interface
 import manipulacaoArquivos
 from unittest.mock import ANY
 
-@pytest.mark.unitarios_pagamento
+@pytest.mark.unitario_pagamento
 def test_realizar_pagamento(mocker):
     """
     Testa o cenário de realizar pagamento.
