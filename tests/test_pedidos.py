@@ -41,7 +41,7 @@ def test_adicionar_pedido(mocker):
     mocker.patch('interface.pausar')
 
     # --- ACT ---
-    pedidos.adicionar_pedido(mocker)
+    pedidos.adicionar_pedido()
 
     # --- ASSERT ---
     # Verifica se a lista tem o produto escolhido
